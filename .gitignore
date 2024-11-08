@@ -1,50 +1,41 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignorar a pasta node_modules em ambos os diretórios
+node_modules/
+client/node_modules/
+server/node_modules/
 
-# dependencies
-/node_modules
-/client/node_modules
-/server/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Ignorar arquivos de ambiente em ambos os diretórios
+.env
+.env.local
+.env.*.local
+client/.env
+client/.env.local
+client/.env.*.local
+server/.env
+server/.env.local
+server/.env.*.local
 
-# testing
-/coverage
-/client/coverage
-/server/coverage
+# Ignorar build do Next.js no frontend
+client/.next/
 
-# next.js
-/client/.next
-/client/out
+# Ignorar arquivos de build do Express no backend (caso haja uma pasta build/dist)
+server/dist/
+server/build/
 
-# production
-/build
-/client/build
-/server/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+logs/
+*.log
+client/logs/
+server/logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# env files (can opt-in for committing if needed)
-.env*
-/client/.env*
-/server/.env*
+# Outras configurações específicas do sistema operacional
+.DS_Store          # macOS
+Thumbs.db          # Windows
+.idea/             # Configurações do IDE (IntelliJ, WebStorm)
+.vscode/           # Configurações do Visual Studio Code
 
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-/client/tsbuildinfo
-/server/tsbuildinfo
-/client/next-env.d.ts
+# Outras pastas de cache ou arquivos temporários
+client/out/
+server/out/
